@@ -1,0 +1,64 @@
+.Container {
+  height: calc(100vh - 70px);
+  border-right: 1px solid #ececec;
+  width: 100px;
+  margin-top: 70px;
+  position:absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #ffffff;
+}
+
+.OuterNav {
+  padding: 0;
+  margin: 0;
+}
+
+.OuterNav li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 99px;
+  cursor: pointer;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.OuterNav span {
+  margin-top: 3px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.OuterNav li:hover {
+  background: #f3f3f3
+}
+
+.OuterIcon {
+  height: 35%;
+  fill: grey;
+}
+
+.OuterNav li:hover .OuterIcon,
+.Selected .OuterIcon {
+  fill: #4747f3;
+}
+
+.OuterNav li:hover span,
+.Selected span {
+  color: #4747f3;
+}
+
+.Selected {
+  border-left: 3px solid blue;
+}
+
+.Selected .OuterIcon {
+  fill: #4747f3;
+}

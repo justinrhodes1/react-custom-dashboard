@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './components/Header/Header';
+import OuterNav from './components/Nav/OuterNav/OuterNav';
+import Main from './components/Main/Main';
 
 class App extends Component {
+  state = {
+    menuClicked: false,
+    showOuterMenu: false,
+    showInnerMenu: false
+  }
+
+  menuHandler = () => {
+    this.setState(prevState => ({ menuClicked: !prevState.menuClicked }));
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <>
+        <Header menuHandler={this.menuHandler} />
+        <Main menuHandler={this.menuHandler} menuClicked={this.state.menuClicked} />
+        <OuterNav menuClicked={this.state.menuClicked} />
+      </>
     );
   }
 }

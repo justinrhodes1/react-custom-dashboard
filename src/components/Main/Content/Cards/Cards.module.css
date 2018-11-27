@@ -1,0 +1,17 @@
+.OuterScrollContainer {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+  background: #fbfbfb;
+}
+
+.InnerScrollContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.CardIcon {
+  fill: grey;
+  height: 50px;
+  margin-bottom: 25px;
+}

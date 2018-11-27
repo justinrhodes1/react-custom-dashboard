@@ -1,0 +1,48 @@
+.Header {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 1px 16px rgba(0,0,0,.05), 0 1px 5px rgba(0,0,0,.05);
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index:999;
+}
+
+.HeaderContainer {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.HeaderItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.UserName {
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.Logo {
+  height: 50px;
+}
+
+.Menu { 
+  height: 25px;
+  fill: #aaaaaa;
+  margin-right: 15px; 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Menu:hover {
+  fill: blue
+}

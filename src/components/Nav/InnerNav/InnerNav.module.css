@@ -1,0 +1,47 @@
+.Container {
+  height: calc(100vh - 70px);
+  border-right: 1px solid #ececec;
+  width: 200px;
+  position: relative;
+  padding: 10px 25px;
+  left: 100px;
+  bottom: 100%;
+  background: #ffffff;
+}
+
+.InnerNav {
+  padding: 0;
+  margin: 0;
+}
+
+.InnerNav li {
+  list-style-type: none;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  /* border-bottom: 1px solid #ececec; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.InnerNav span {
+  user-select: none;
+}
+
+.InnerNav li:hover span {
+  color: #4747f3;
+}
+
+/* .InnerNav li:hover {
+  background: #f3f3f3
+} */
+
+.InnerIcon {
+  height:25px;
+  margin-right: 10px;
+  fill: grey;
+}
