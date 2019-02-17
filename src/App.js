@@ -20,7 +20,7 @@ class App extends Component {
       <>
         <Header menuHandler={this.menuHandler} />
         <Main menuHandler={this.menuHandler} menuClicked={this.state.menuClicked} />
-        <OuterNav menuClicked={this.state.menuClicked} />
+        <OuterNav menuHandler={this.menuHandler} menuClicked={this.state.menuClicked} />
       </>
     );
   }

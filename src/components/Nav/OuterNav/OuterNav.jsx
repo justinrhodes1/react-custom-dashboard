@@ -19,7 +19,7 @@ class OuterNav extends Component {
 
   render() {
     const { clickIndex } = this.state;
-    const { menuClicked } = this.props;
+    const { menuClicked, menuHandler } = this.props;
     const optionArray = [{
       icon: ChestnutSvg,
       text: 'Option 1'
@@ -56,11 +56,13 @@ class OuterNav extends Component {
         }}
       >
         <PerfectScrollbar>
-          <ul className={css.OuterNav}>
-            {options}
-          </ul>
+          <nav>
+            <ul className={css.OuterNav}>
+              {options}
+            </ul>
+          </nav>
         </PerfectScrollbar>
-        <InnerNav menuClicked={menuClicked} />
+        <InnerNav menuClicked={menuClicked} menuHandler={menuHandler} />
       </div>
     );
   }

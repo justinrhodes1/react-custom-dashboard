@@ -1,0 +1,99 @@
+.FlexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Timeline {
+  margin-left: 75px;
+}
+
+.Timeblock {
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 1;
+}
+
+.Timeblock .Circle {
+  border: 1px solid #2196F3;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin: 15px;
+}
+
+.Timeblock .Date {
+  width: 85px;
+  text-align: right;
+  color: grey;
+  font-size: 13px;
+}
+
+.Timeblock .Circle::after,
+.Timeblock .Circle.Grey::after,
+.Timeblock .Date.Shortened::before,
+.Timeblock .Date.Shortened::after {
+  content: "";
+  position: absolute;
+}
+
+.Timeblock .Circle::after,
+.Timeblock .Circle.Grey::after {
+  border-left: 1px solid #2196F3;
+  height: calc(100% - 25px);
+  bottom: -10px;
+  left: 107px;
+}
+
+.Timeblock .Circle.Grey::after {
+  border-left: 1px solid #d3d3d3;
+}
+
+.Timeblock .Date.Shortened::before,
+.Timeblock .Date.Shortened::after {
+  border-bottom: 1px solid #b3b3b3;
+  bottom: calc(50% - 23px);
+  transform: rotate(-15deg);
+  width: 10px;
+  left: 102px;
+}
+
+.Timeblock .Date.Shortened::after {
+  bottom: calc(50% - 26px);
+}
+
+.Timeblock .Grey {
+  border: 1px solid #d3d3d3;
+}
+
+.Pulse  {
+  border-width: 2px !important;
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}

@@ -20,7 +20,6 @@
   height: 50px;
   width: 100%;
   cursor: pointer;
-  /* border-bottom: 1px solid #ececec; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,11 +27,13 @@
   font-size: 14px;
 }
 
-.InnerNav span {
+.InnerNav a {
   user-select: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-.InnerNav li:hover span {
+.InnerNav li:hover a {
   color: #4747f3;
 }
 
